@@ -19,3 +19,6 @@ Or, if you have a `bin` folder (assuming `$HOME/bin`):
 `$ git clone https://github.com/Ocramoi/torrent-search $HOME/torrent-search`
 
 `$ ln -s $HOME/torrent-search/torrent-search $HOME/bin`
+
+# TODO
+- [ ] Show file size
