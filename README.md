@@ -21,4 +21,4 @@ Or, if you have a `bin` folder (assuming `$HOME/bin`):
 `$ ln -s $HOME/torrent-search/torrent-search $HOME/bin`
 
 # TODO
-- [ ] Show file size
+- [x] Show file size

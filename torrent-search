@@ -12,11 +12,12 @@ fi
 if [ "$query" == "" ]; then exit; fi 
 query=$(sed 's| |%20|g' <<< $query)
 videoids=$(
-curl -s https://www.1377x.to/search/$query/1/ | \
-	grep -o '<a href="/torrent/.*</a>' | \
-	sed 's|<a href="/||g' | \
-	sed 's|">| |g' | \
-	sed 's|</a>||g')
+curl -s https://www.1377x.to/search/gorillaz/1/ | \
+        grep -o -E '<a href="/torrent/.*</a>|<td class="coll-4 size mob-uploader">.*</td>' |  \
+        sed 's|<a href="/||g' | sed 's|<td class="coll-4 size mob-uploader">||g' | \
+        sed 's|">| |g' | \
+        sed 's|</a>||g' | sed 's|</td>||g' | \
+		awk 'NR%2{printf "%s ",$0;next;}1')
 while true; do
 	videoid=$(
 	echo -e "$videoids" | \
