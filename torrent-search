@@ -12,7 +12,7 @@ fi
 if [ "$query" == "" ]; then exit; fi 
 query=$(sed 's| |%20|g' <<< $query)
 videoids=$(
-curl -s https://www.1377x.to/search/gorillaz/1/ | \
+curl -s https://www.1377x.to/search/$query/1/ | \
         grep -o -E '<a href="/torrent/.*</a>|<td class="coll-4 size mob-uploader">.*</td>|<td class="coll-2 seeds">.*</td>' |  \
         sed 's|<a href="/||g' | sed 's|<td class="coll-2 seeds">|Seeds: |g' | sed 's|<td class="coll-4 size mob-uploader">|Size: |g' | \
         sed 's|">| |g' | \
