@@ -22,3 +22,4 @@ Or, if you have a `bin` folder (assuming `$HOME/bin`):
 
 # TODO
 - [x] Show file size
+- [ ] Show amount of seeders
