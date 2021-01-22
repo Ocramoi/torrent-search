@@ -21,6 +21,17 @@ Or, if you have a `bin` folder (assuming `$HOME/bin`):
 
 `$ ln -s $HOME/torrent-search/torrent-search $HOME/bin`
 
+# Usage
+To use the tool once it's on your PATH simply type `torrent-search <search query>` or just `torrent-search` and you'll then receive the search prompt. Example:
+
+`$ torrent-search Night of the Living Dead`
+
+or
+
+`$ torrent-search` \<RET\>
+
+`Search: Night of the Living Dead` \<RET\>
+
 # TODO
 - [x] Show file size
 - [x] Show amount of seeders
