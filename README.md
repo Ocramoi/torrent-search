@@ -4,6 +4,7 @@ Bash only script for searching torrents on 1337x, based on [Sayan G's](https://g
 
 # Requirements
 - [fzf](https://github.com/junegunn/fzf)
+- sed, awk, grep, bash
 
 # Installation
 To install the script simply clone the git repository and add it to your PATH (or move `torrent-search` to your user's bin folder) as such:
