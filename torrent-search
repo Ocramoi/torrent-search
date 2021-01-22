@@ -1,0 +1,28 @@
+#!/bin/bash
+# Bash only script for searching 1337x
+# Based on Sayan G's (https://github.com/sayan01) youtube search script [https://github.com/sayan01/scripts/blob/master/yt]
+# Marco Toledo
+
+if [ "$1" == "" ]; then 
+	echo -n "Search: "
+	read query
+else
+	query="$@"
+fi
+if [ "$query" == "" ]; then exit; fi 
+query=$(sed 's| |%20|g' <<< $query)
+videoids=$(
+curl -s https://www.1377x.to/search/$query/1/ | \
+	grep -o '<a href="/torrent/.*</a>' | \
+	sed 's|<a href="/||g' | \
+	sed 's|">| |g' | \
+	sed 's|</a>||g')
+while true; do
+	videoid=$(
+	echo -e "$videoids" | \
+	fzf --with-nth='2..-1' | \
+	cut -d' ' -f1)
+	if [ "$videoid" == "" ]; then exit; fi
+	curl -s https://www.1377x.to/$videoid | grep -o 'magnet.*" on' | sed 's|" on||g'
+	exit
+done
