@@ -32,6 +32,11 @@ or
 
 `Search: Night of the Living Dead` \<RET\>
 
+# Tips
+- To directly download the selected magnet, you can just pipe the output to a bitTorrent client as such:
+
+`$ torrent-search Night of the Living Dead | xargs <bitTorrent client>`
+
 # TODO
 - [x] Show file size
 - [x] Show amount of seeders
