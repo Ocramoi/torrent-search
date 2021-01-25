@@ -1,6 +1,6 @@
 # torrent-search
 
-Bash only script for searching torrents on 1337x, based on [Sayan G's](https://github.com/sayan01) [youtube search script](https://github.com/sayan01/scripts/blob/master/yt).
+Bash only script for searching torrents on 1377x, based on [Sayan G's](https://github.com/sayan01) [youtube search script](https://github.com/sayan01/scripts/blob/master/yt).
 
 # Requirements
 - [fzf](https://github.com/junegunn/fzf)
