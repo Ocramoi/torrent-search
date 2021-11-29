@@ -24,6 +24,6 @@ while true; do
 	fzf --with-nth='2..-1' | \
 	cut -d' ' -f1)
 	if [ "$videoid" == "" ]; then exit; fi
-	curl -s https://www.1377x.to/$videoid | grep -o 'magnet.*" on' | sed 's|" on||g'
+	curl -s https://www.1377x.to/$videoid | grep -o 'magnet:.*" on' | sed 's|" on||g'
 	exit
 done
