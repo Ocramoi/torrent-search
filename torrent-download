@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo -n "Search: "
+torrent-search | xargs aria2c -d .

@@ -3,7 +3,7 @@
 # Based on Sayan G's (https://github.com/sayan01) youtube search script [https://github.com/sayan01/scripts/blob/master/yt]
 # Marco Toledo
 
-if [ "$1" == "" ]; then 
+if [ $# -lt 1 ]; then 
 	echo -n "Search: "
 	read query
 else
